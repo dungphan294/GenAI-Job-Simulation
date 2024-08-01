@@ -149,3 +149,95 @@ Preparing and preprocessing data is crucial for the successful application of AI
 This stage is not just about technical execution but also understanding the financial context and relevance of the data being processed.
 
 By mastering these skills, you can effectively prepare and preprocess financial data, making it ready for AI-driven applications.
+
+---
+
+## Task instructions
+
+Your task is to manually extract key financial data for the last three fiscal years from the 10-K filings of Microsoft, Tesla, and Apple. Following the data collection, you will use Python to analyze this data, focusing on trends and insights that could inform the development of an AI-powered financial chatbot.
+
+### Step 1: Data extraction
+
+#### Navigate to the SEC's EDGAR database
+
+[Microsoft](https://www.sec.gov/edgar/browse/?CIK=789019&owner=exclude)
+[Tesla](https://www.sec.gov/edgar/browse/?CIK=1318605&owner=exclude)
+[Apple](https://www.sec.gov/edgar/browse/?CIK=320193&owner=exclude)
+
+#### Manual extraction
+
+For each company, find the 10-K filings for the last three fiscal years.
+Extract the following financial figures: Total Revenue, Net Income, Total Assets, Total Liabilities, and Cash Flow from Operating Activities.
+
+#### Organize Your Data:
+
+Compile the extracted data into an Excel spreadsheet for easy reference during your Python analysis.
+
+### Step 2: Preparing your Jupyter Notebook environment
+
+**Install Jupyter** (if not already installed):
+
+Install Jupyter using pip if you haven't already:
+
+```cmd
+pip install notebook
+```
+
+Launch Jupyter Notebook:
+
+```cmd
+jupyter notebook
+```
+
+This command should open Jupyter in your web browser.
+
+**Create a new notebook**:
+In the Jupyter interface, create a new notebook for your analysis.
+
+### Step 3: Python analysis in Jupyter
+
+#### Import pandas
+
+At the beginning of your notebook, import the pandas library to work with your data.
+
+```python3
+import pandas as pd
+```
+
+#### Load your data
+
+Convert your Excel file to a CSV file for easier handling, then load it into a DataFrame.
+
+```python3
+df = pd.read_csv('path_to_your_csv_file.csv')
+```
+
+#### Analyzing trends with pandas
+
+Use pandas to calculate year-over-year changes for each financial metric. You can do this by creating new columns in your DataFrame that represent the percentage change from one year to the next.
+
+```python3
+df['Revenue Growth (%)'] = df.groupby(['Company'])['Total Revenue'].pct_change() * 100
+df['Net Income Growth (%)'] = df.groupby(['Company'])['Net Income'].pct_change() * 100
+```
+
+Explore other aggregate functions or groupings to analyze the data across different dimensions (by company, over years, etc.).
+
+#### Summarizing findings
+
+Conclude your analysis by summarizing your findings directly in the notebook. Use markdown cells to add narrative explanations of your analysis, discussing the trends and changes in financial metrics you've identified.
+
+### Step 4: Documentation and submission
+
+#### Document your analysis
+
+- Use the markdown feature in Jupyter Notebook to document your methodology, observations, and conclusions throughout the notebook.
+
+#### Export your notebook
+
+Once your analysis is complete, export your Jupyter Notebook as a PDF or HTML file for submission.
+You can do this from the "File" menu in Jupyter, selecting "Download as" and then choosing your preferred format.
+
+This approach allows you to focus on the core analytical aspects using pandas within a Jupyter Notebook, providing a clear, documented narrative of your financial analysis process. By the end of this task, you'll have a comprehensive understanding of how to analyze financial data programmatically, a valuable skill set for data-driven decision-making.
+
+ 
