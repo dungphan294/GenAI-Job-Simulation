@@ -111,3 +111,41 @@ By understanding the structure of 10-K reports and mastering these extraction te
 ### Here are some resources to help you
 
 [How to Read a 10-K/10-Q](https://www.sec.gov/resources-for-investors/investor-alerts-bulletins/how-read-10-k10-q)
+
+---
+
+## Preparing and preprocessing data for AI-driven applications
+
+### Data preparation steps
+
+**Data cleaning**:
+
+- Involves correcting or removing incorrect, corrupted, or duplicate data.
+- Techniques include filling in missing values, smoothing noisy data, and resolving inconsistencies.
+
+**Data transformation**:
+
+- This step is about normalizing and standardizing data to ensure it's in a usable format for AI models.
+- Includes converting all financial figures to a consistent format (e.g., all figures in thousands or millions) and adjusting for inflation or currency changes where necessary.
+
+### Preprocessing for AI models
+
+**Feature engineering**:
+
+- The process of using domain knowledge to create features that make machine learning algorithms work. In financial data, this might involve creating ratios or deriving financial health indicators from raw data.
+
+**Data encoding and formatting**:
+
+- Many AI models require data in a specific format. This may involve encoding categorical data (like fiscal quarters) into numerical values or restructuring data sets for time-series analysis.
+
+**Dealing with time-series data**:
+
+- Financial data often involves time-series analysis. Special care should be taken to handle trends and seasonality and potentially integrate lag features that capture past values.
+
+### Key takeaways
+
+Preparing and preprocessing data is crucial for the successful application of AI in finance. It ensures that the data fed into AI models is clean, consistent, and structured in a way that maximizes the model's ability to learn and make accurate predictions or provide valuable insights.
+
+This stage is not just about technical execution but also understanding the financial context and relevance of the data being processed.
+
+By mastering these skills, you can effectively prepare and preprocess financial data, making it ready for AI-driven applications.
